@@ -17,6 +17,9 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 购物车
+ */
 @Controller
 @RequestMapping(path = "/cart")
 public class CartController {
