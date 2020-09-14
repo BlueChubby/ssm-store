@@ -20,36 +20,7 @@ pom.xml
 */
 public class SendSms {
     public static SendResult sendCode(String phone) {
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4G495kTyXRSNQqFMgmte", "e1EEJKESmXnXsd2tjC8sx12DzzvTb3");
-        String phonenumber=phone;
-        int httpStatus=0;
-        IAcsClient client = new DefaultAcsClient(profile);
-        Integer i=(int)((Math.random()*9+1)*100000);
-        String str="{\"code\":"+i+"}";
-//        String str="{\"code\":111111}";
-        CommonRequest request = new CommonRequest();
-        request.setSysMethod(MethodType.POST);
-        request.setSysDomain("dysmsapi.aliyuncs.com");
-        request.setSysVersion("2017-05-25");
-        request.setSysAction("SendSms");
-        request.putQueryParameter("RegionId", "cn-hangzhou");
-        request.putQueryParameter("PhoneNumbers", phonenumber);
-        request.putQueryParameter("SignName", "叮当ABC影视");
-        request.putQueryParameter("TemplateCode", "SMS_192542438");
-        request.putQueryParameter("TemplateParam",str );
-        try {
-            CommonResponse response = client.getCommonResponse(request);
-            httpStatus = response.getHttpStatus();
-            System.out.println(httpStatus);
-        } catch (ServerException e) {
-            e.printStackTrace();
-        } catch (ClientException e) {
-            e.printStackTrace();
-        }
-        SendResult sendResult=new SendResult();
-        sendResult.setCode(i);
-        sendResult.setStatus(httpStatus);
-        return sendResult;
+//        自行处理
     }
 }
 
