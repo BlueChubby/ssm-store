@@ -17,10 +17,5 @@ pom.xml
   <artifactId>aliyun-java-sdk-core</artifactId>
   <version>4.5.0</version>
 </dependency>
-*/
-public class SendSms {
-    public static SendResult sendCode(String phone) {
-//        自行处理
-    }
-}
+
 
